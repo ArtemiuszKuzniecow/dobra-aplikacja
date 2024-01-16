@@ -18,3 +18,5 @@ export function useTheme(): UseThemeResult {
     theme, toggleTheme
   };
 }
+
+export { ThemeContext };
