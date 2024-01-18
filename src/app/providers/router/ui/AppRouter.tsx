@@ -4,9 +4,11 @@ import { RouterConfig } from "shared/config/routerConfig/routerConfig";
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>Loading</div>}>
-      {useRoutes(RouterConfig())}
-    </Suspense>
+    <div className="page-wrapper">
+      <Suspense fallback={<div>Loading</div>}>
+        {useRoutes(RouterConfig())}
+      </Suspense>
+    </div>
   );
 };
 
