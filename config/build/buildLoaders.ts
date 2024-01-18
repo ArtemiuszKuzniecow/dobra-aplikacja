@@ -2,6 +2,20 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders(options: BuildOptions) {
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack']
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    use: [
+      {
+        loader: 'file-loader'
+      }
+    ]
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -11,7 +25,7 @@ export function buildLoaders(options: BuildOptions) {
         options: {
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-            localIdentName: '[name]__[hash:base64:5]'
+            localIdentName: '[name]__[hash:base64:5]',
           },
         }
       },
@@ -26,6 +40,8 @@ export function buildLoaders(options: BuildOptions) {
   };
 
   return [
+    svgLoader,
+    fileLoader,
     typescriptLoader,
     cssLoader
   ];
