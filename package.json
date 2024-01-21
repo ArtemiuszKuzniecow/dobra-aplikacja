@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx webpack serve --env port=3000 ",
     "build:prod": "npx webpack --env mode=production",
-    "build:dev": "npx webpack --env mode=development"
+    "build:dev": "npx webpack --env mode=development",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +21,11 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "css-loader": "^6.8.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.6",
@@ -35,8 +41,12 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "i18next": "^23.7.18",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "i18next-http-backend": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^14.0.1",
     "react-router-dom": "^6.21.1"
   }
 }
