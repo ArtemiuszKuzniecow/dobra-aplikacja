@@ -2,5 +2,6 @@
   "loading": "Ładowanie. Proszę czekać!",
   "changeLanguage": "English",
   "hide": "Ukryj",
-  "show": "Pokaż"
+  "show": "Pokaż",
+  "notFound": "Strona nie znaleziona"
 }

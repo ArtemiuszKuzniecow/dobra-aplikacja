@@ -9,6 +9,7 @@ export function classNames(
 
   const modClasses = mod
     ? Object.entries(mod)
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         .filter(([_, value]) => Boolean(value))
         .map(([className]) => className)
     : [];
