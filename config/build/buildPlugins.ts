@@ -1,8 +1,9 @@
-import HTMLWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HTMLWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { WebpackPluginInstance } from "webpack";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { BuildOptions } from "./types/config";
-import webpack from 'webpack';
+import webpack from "webpack";
 
 export function buildPlugins({ paths, isDev }: BuildOptions) {
   const plugins = [
@@ -10,13 +11,16 @@ export function buildPlugins({ paths, isDev }: BuildOptions) {
       template: paths.html,
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
+      filename: "css/[name].[contenthash:8].css",
+      chunkFilename: "css/[name].[contenthash:8].css",
     }),
     new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev)
+      __IS_DEV__: JSON.stringify(isDev),
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ];
 
   return plugins as WebpackPluginInstance[];

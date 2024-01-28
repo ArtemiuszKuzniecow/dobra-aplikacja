@@ -4,5 +4,7 @@
   "changeLanguageShort": "PL",
   "hide": "<",
   "show": ">",
-  "notFound": "Page not found"
+  "notFound": "Page not found",
+  "errorMessage": "Something went wrong, try again later.",
+  "reloadPage": "Reload page"
 }

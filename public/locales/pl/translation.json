@@ -4,5 +4,7 @@
   "changeLanguageShort": "EN",
   "hide": "<",
   "show": ">",
-  "notFound": "Strona nie znaleziona"
+  "notFound": "Strona nie znaleziona",
+  "errorMessage": "Coś poszło nie tak, spróbuj ponownie później.",
+  "reloadPage": "Przeładuj stronę"
 }
