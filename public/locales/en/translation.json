@@ -1,7 +1,8 @@
 {
   "loading": "Loading. Please, wait!",
-  "changeLanguage": "Polski",
-  "hide": "Hide",
-  "show": "Show",
+  "changeLanguageFull": "Polski",
+  "changeLanguageShort": "PL",
+  "hide": "<",
+  "show": ">",
   "notFound": "Page not found"
 }

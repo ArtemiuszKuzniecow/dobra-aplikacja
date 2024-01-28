@@ -16,13 +16,22 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
   return (
     <Button
       onClick={toggleTheme}
-      className={classNames(cls.themeSwitcher, {}, [cls[className]])}
+      className={classNames(cls.themeSwitcherIcon, {}, [cls[className]])}
       theme={ThemeButton.CLEAR}
     >
       {theme === Theme.DARK ? (
-        <DarkIcon width={50} height={20} />
+        <DarkIcon
+          width={50}
+          height={20}
+          className={classNames(cls.icon, {}, [cls[className]])}
+          style={{ fill: "var(--header-font-color)" }}
+        />
       ) : (
-        <LightIcon width={50} height={20} />
+        <LightIcon
+          width={50}
+          height={20}
+          style={{ fill: "var(--header-font-color)" }}
+        />
       )}
     </Button>
   );

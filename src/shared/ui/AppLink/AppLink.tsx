@@ -3,6 +3,7 @@ import { classNames } from "shared/lib/classNames";
 import cls from "./AppLink.module.scss";
 
 export enum AppLinkTheme {
+  DEFAULT = "link",
   PRIMARY = "primary",
   SECONDARY = "secondary",
 }
@@ -13,7 +14,7 @@ interface AppLinkProps extends LinkProps {
 }
 
 export const AppLink = (props: AppLinkProps) => {
-  const { children, to, className, theme = AppLinkTheme.PRIMARY } = props;
+  const { children, to, className, theme = AppLinkTheme.DEFAULT } = props;
 
   return (
     <Link

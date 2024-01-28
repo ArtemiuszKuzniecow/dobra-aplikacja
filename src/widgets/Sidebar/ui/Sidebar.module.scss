@@ -1,7 +1,7 @@
 .sideBar {
   position: relative;
   height: calc(100vh - var(--navbar-height));
-  background: var(--bg-inverted-color);
+  background: var(--header-secondary-color);
   min-width: var(--sidebar-width);
   transition: 0.4s;
 }
@@ -14,7 +14,13 @@
   position: absolute;
   bottom: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   width: 100%;
+}
+
+.sidebarSwitcherButton {
+  text-align: center;
 }
