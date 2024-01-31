@@ -1,19 +1,15 @@
 /**
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
-*/
+ */
 
-import type {Config} from 'jest';
+import type { Config } from "jest";
 
 const config: Config = {
   clearMocks: true,
   testEnvironment: "jest-environment-jsdom",
-  coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\"
-  ],
-  moduleDirectories: [
-    "node_modules"
-  ],
+  coveragePathIgnorePatterns: ["\\\\node_modules\\\\"],
+  moduleDirectories: ["node_modules"],
   moduleFileExtensions: [
     "js",
     "mjs",
@@ -22,19 +18,22 @@ const config: Config = {
     "ts",
     "tsx",
     "json",
-    "node"
+    "node",
   ],
-  rootDir: '../../',
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-  ],
-  "preset": "ts-jest",
-  "transform": {
-    "^.+\\.[jt]sx?$": "babel-jest"
-  }
+  rootDir: "../../",
+  testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
+  preset: "ts-jest",
+  transform: {
+    "^.+\\.[jt]sx?$": "babel-jest",
+  },
+  setupFilesAfterEnv: ["<rootDir>config/jest/setupTests.ts"],
+  moduleNameMapper: {
+    "^.*$": "<rootDir>/src/$1",
+    "\\.s?css$": "identity-obj-proxy",
+  },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-  
+
   // Stop running tests after `n` failures
   // bail: 0,
 
@@ -42,7 +41,6 @@ const config: Config = {
   // cacheDirectory: "C:\\Users\\artyk\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls, instances, contexts and results before every test
-
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -155,7 +153,6 @@ const config: Config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
