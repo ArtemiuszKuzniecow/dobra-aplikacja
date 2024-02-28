@@ -1,21 +1,19 @@
-import cls from "./Loader.module.scss";
-import { classNames } from "shared/lib/classNames";
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Loader.module.scss';
 
-export const Loader = () => {
-  return (
-    <div className={classNames(cls.ldsSpinner)}>
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-      <div />
-    </div>
-  );
-};
+export const Loader = () => (
+  <div className={classNames(cls.ldsSpinner)}>
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+);

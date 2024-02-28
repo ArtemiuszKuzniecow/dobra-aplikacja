@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import cls from "./ErrorMessage.module.scss";
+import { ReactNode } from 'react';
+import cls from './ErrorMessage.module.scss';
 
 interface ErrorMessageProps {
   children: ReactNode;

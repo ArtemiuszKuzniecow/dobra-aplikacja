@@ -1,6 +1,6 @@
-import { Button, ThemeButton } from "shared/ui";
-import cls from "../Sidebar.module.scss";
-import { useTranslation } from "react-i18next";
+import { Button, ThemeButton } from 'shared/ui';
+import { useTranslation } from 'react-i18next';
+import cls from '../Sidebar.module.scss';
 
 interface SidebarToggleSwitcherProps {
   collapsed: boolean;
@@ -9,12 +9,12 @@ interface SidebarToggleSwitcherProps {
 
 export const SidebarToggleSwitcher = (props: SidebarToggleSwitcherProps) => {
   const { collapsed, onToggle } = props;
-  const { t } = useTranslation("");
+  const { t } = useTranslation('');
 
   return (
     <div className={cls.sidebarSwitcherButton}>
-      <Button theme={ThemeButton.OUTLINED} onClick={onToggle}>
-        {collapsed ? t("show") : t("hide")}
+      <Button theme={ThemeButton.OUTLINED} onClick={onToggle} data-testid="sidebar-toggle">
+        {collapsed ? t('show') : t('hide')}
       </Button>
     </div>
   );
