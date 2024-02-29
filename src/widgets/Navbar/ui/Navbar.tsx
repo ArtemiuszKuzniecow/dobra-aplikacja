@@ -5,7 +5,7 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
-  className: string;
+  className?: string;
 }
 
 export const Navbar = (props: NavbarProps) => {

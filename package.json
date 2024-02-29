@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "npx webpack serve --env port=3000 ",
     "build:prod": "npx webpack --env mode=production",
