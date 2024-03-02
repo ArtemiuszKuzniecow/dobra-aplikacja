@@ -1,9 +1,12 @@
 .sideBar {
-  position: relative;
-  height: calc(100vh - var(--navbar-height));
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: var(--header-secondary-color);
   min-width: var(--sidebar-width);
   transition: 0.4s;
+  z-index: 1;
 }
 
 .collapsed {

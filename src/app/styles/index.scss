@@ -13,6 +13,7 @@
 .content-page {
   display: flex;
   padding-top: var(--navbar-height);
+  padding-left: var(--sidebar-width-collapsed);
 }
 
 .page-wrapper {

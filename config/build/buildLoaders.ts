@@ -1,5 +1,6 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
+import { buildCssLoader } from "./loaders/buildCssLoader";
 
 export function buildLoaders(options: BuildOptions) {
   const svgLoader = {
@@ -16,22 +17,7 @@ export function buildLoaders(options: BuildOptions) {
     ]
   };
 
-  const cssLoader = {
-    test: /\.s[ac]ss$/i,
-    use: [
-      options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          modules: {
-            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-            localIdentName: '[name]__[hash:base64:5]',
-          },
-        }
-      },
-      'sass-loader'
-    ]
-  };
+  const cssLoader = buildCssLoader(options.isDev);
 
   const typescriptLoader = {
     test: /\.tsx?$/,

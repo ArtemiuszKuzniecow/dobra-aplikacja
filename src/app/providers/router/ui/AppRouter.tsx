@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { RouterConfig } from 'shared/config/routerConfig/routerConfig';
-import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
+import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => (
   <div className="page-wrapper">

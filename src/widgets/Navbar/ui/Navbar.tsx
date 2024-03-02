@@ -17,7 +17,7 @@ export const Navbar = (props: NavbarProps) => {
       <div className={cls.links}>
         <AppLink to="/">{tMain('mainHeadline')}</AppLink>
         <AppLink to="/about">{tAbout('aboutHeadline')}</AppLink>
-        <ThemeSwitcher className="" />
+        <ThemeSwitcher />
       </div>
     </div>
   );
