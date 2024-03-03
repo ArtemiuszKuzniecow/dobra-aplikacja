@@ -1,3 +1,17 @@
 {
-  "extends": "stylelint-config-standard-scss"
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "selector-class-pattern": [
+      "^([a-z][a-zA-Z0-9]*(-[a-zA-Z0-9]+)*)+$",
+      {
+        "message": "Class names should be in camelCase or kebab-case."
+      }
+    ],
+    "keyframes-name-pattern": [
+      "^([a-z][a-zA-Z0-9]*(-[a-zA-Z0-9]+)*)+$",
+      {
+        "message": "Keyframes names should be in camelCase or kebab-case."
+      }
+    ]
+  }
 }

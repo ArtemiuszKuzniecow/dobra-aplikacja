@@ -9,7 +9,7 @@
     transform-origin: 40px 40px;
     animation: ldsSpinner 1.2s linear infinite;
 
-    &:after {
+    &::after {
       content: " ";
       display: block;
       position: absolute;
@@ -87,6 +87,7 @@
   0% {
     opacity: 1;
   }
+  
   100% {
     opacity: 0;
   }
