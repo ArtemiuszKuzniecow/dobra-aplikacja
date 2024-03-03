@@ -6,7 +6,7 @@ import { BuildOptions } from "./types/config";
 import webpack from "webpack";
 
 export function buildPlugins({ paths, isDev }: BuildOptions) {
-  const plugins = [
+  const plugins: WebpackPluginInstance[] = [
     new HTMLWebpackPlugin({
       template: paths.html,
     }),
@@ -16,12 +16,17 @@ export function buildPlugins({ paths, isDev }: BuildOptions) {
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
+    })
   ];
 
-  return plugins as WebpackPluginInstance[];
+  if (isDev) {
+    plugins.concat([
+      new webpack.HotModuleReplacementPlugin(), 
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
+    ])
+  }
+
+  return plugins;
 }
